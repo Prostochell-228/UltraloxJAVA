@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Main {
+{
 
 
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class Main {
             try {
                 String nAsString = in.next();
                 int N = Integer.parseInt(nAsString);
-                if(N<5||N>0){
+                if (N < 5 || N > 0) {
                     switch (N) {
                         case 1: {
                             text(a);
@@ -25,27 +23,49 @@ public class Main {
                             photo(a);
                             break;
                         }
+                        case 4: {
+                            instruction();
+                            break;
+                        }
                         default:
-                            System.out.println("Такого пункта нету");
+                            System.out.print("Такого пункта нету \n");
                             break;
                     }
-                    System.out.println();
+                    System.out.println("Вы вернулись в меню. Возможно вы получили ответ или же ваш ввод был некоректен. В этом случее обратитесь к инструкции");
+                    System.out.print("Тип задачи: \n 1. Текстовая информация \n 2. Звуковая информация \n 3. Графическая информация \n 4. Краткая инструкция   \n Введите номер: ");
+                } else {
+                    System.out.println("Вводи целочисленное положительное число входяшее в размер Integer, но желательно выбрать число/значение из списка. \nВсё что ты написал не сушетвует и если ты продолжишь в таком ключе разговаривать с програмой ты долго не проживёшь) \nПовторить ввод:");
                 }
-                else{
-                    System.out.println("Вводи целочисленное положительное число. \nВсё что ты написал не сушетвует и если ты продолжишь в таком ключе разговаривать с програмой ты долго не проживёшь) \nПовторить ввод:");
-                }
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println("Вводи целочисленное положительное число. \nВсё что ты написал не сушетвует и если ты продолжишь в таком ключе разговаривать с програмой ты долго не проживёшь) \nПовторить ввод:");
             }
         }
     }
-    public static int coder(){
+
+    public static void instruction() {
+        System.out.println("Добро пожаловать в инструкцию к программе:");
+        System.out.println(ANSI_CYAN + "ТРЕПЕЩИ ХИМБИО УТКАНОС РЕШАТОИНАТОР" + ANSI_RESET);
+        System.out.print("Данная программа преднозначена для решения ");
+    }
+
+    public static int coder() {
         return 0;
     }
-   public static int Finde_N(){
+
+    public static int Finde_N() {
         return 0;
-   }
+    }
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
     public static int text(int a) {
         Scanner in = new Scanner(System.in);
         System.out.print("Что необходимо найти? (I, K, i, N): ");
