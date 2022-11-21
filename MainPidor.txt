@@ -29,9 +29,9 @@ public class Main {
                             instruction();
                             break;
                         }
-                        case 5:  {
+                        case 5: {
                             System.out.println("");
-                            System.out.println( ANSI_RED +"Штирлиц вытащил из сейфа записку Мюллера. Мюллеру было очень больно и он сильно ругался."+ ANSI_RESET);
+                            System.out.println(ANSI_RED + "Штирлиц вытащил из сейфа записку Мюллера. Мюллеру было очень больно и он сильно ругался." + ANSI_RESET);
                             System.out.println("");
                             break;
                         }
@@ -60,47 +60,52 @@ public class Main {
         System.out.println("");
         System.out.println("РАЗДЕЛ 1.Цветовые  маркировки \n" + ANSI_CYAN + "ГОЛУБОЙ - " + ANSI_RESET + "используется лишь для названия программы\n" + ANSI_RED + "КРАСНЫЙ - " + ANSI_RESET + "предупрежденя от разроботчика и угрозы\n" + ANSI_YELLOW + "ЖЁЛТЫЙ - " + ANSI_RESET + "системные сообщения/системные ошибки\n" + ANSI_PURPLE + "ФИОЛЕТОВЫЙ - " + ANSI_RESET + "выделяет ответ к задаче\n" + ANSI_BLUE + "СИНИЙ - " + ANSI_RESET + "этим цветом возможно будет помечаться важная информация\n" + ANSI_GREEN + "ЗЕЛЁНЫЙ - " + ANSI_RESET + "этим цветом отмечены подзаголовки\n" + "СТАНДАРТНЫЙ - " + "основной текст который несёт основную интерактивность или объяснения которые не требуют особого внимания\n");
         System.out.println("");
-        System.out.println("РАЗДЕЛ 2.Управление \n" + "Ввод в программе требуется производить либо целочисленные, положительные числа для пунктов меню и велечин из формул. \nЛибо чистая буква в том регистре который представлен в специальных скобках например: (V, I, M, t, k) и без дополнительных символов и пробелов.\n" + ANSI_BLUE + "Если переменная пустая или не дана в задачи вводите её как (0)" + ANSI_RESET);
+        System.out.println("РАЗДЕЛ 2.Управление \n" + "Ввод в программе требуется производить либо целочисленные, положительные числа для пунктов меню и велечин из формул. \nЛибо чистая буква в том регистре который представлен в специальных скобках например: (V, I, M, t, k) и без дополнительных символов и пробелов.\n" + ANSI_BLUE + "Если переменная пустая или не дана в задачи вводите её как (0)\n " + ANSI_RESET + ANSI_RED + "!!!!ЕСЛИ ВЫБРАТЬ ЗНАЧЕНИЯ ДЛЯ ВВОДА ПЕРЕМЕННОЙ ТО ВСЕ ЕДЕНИЦЫ С ТАКОЙ ЖЕ ПЕРЕМЕННОЙ БУДУТ ПРИНЕМАТЬ ТО ЖЕ СЧИСЛЕНИЕ НАПРЕМЕР I и i!!!!" + ANSI_RESET);
         System.out.println("");
         System.out.println("РАЗДЕЛ 3.Преременные\n" + ANSI_GREEN + "Кодирование текста\n" + ANSI_RESET + "  I(информационный объём текста)\n  K(количество символов)\n  i(информационный вес символа)\n  N(количество символов в алфовите/мошность алфовита)\n" + ANSI_GREEN + "Кодерование звука\n" + ANSI_RESET + "  V(частота кодирования звука)\n  I(объём звукого файла)\n  M(количество звуковых каналов (моно-1/стерео-2) )\n  t(время аудиозаписи)\n  k(разряднось аудиозаписи)\n" + ANSI_GREEN + "Графическая информация\n" + ANSI_RESET + "X(Количество пикселей по координате x/ширина)\n  Y(Количество пикселей по координате y/длина)\n  I(информационный объём графического файла)\n  i(иформационный вес каждого пикселя)\nГлавное стоить помнить что для задач используются формулы:(N = 2^i) - мощность алфовита,()");
+        System.out.println("");
+        System.out.println("Программное обеспечение разработано компанией ОАО 'Юррий122Пакастингкорпорейтед' все права зашишены.");
+        System.out.println("Телефон технической поддержки: 89529287459");
         System.out.println("");
         System.out.println("");
     }
 
-    public static int coder(int B,int moderin) {
-        switch (B){
-            case 2:{
-                moderin=8;
+    public static int coder(int B, int moderin) {
+        switch (B) {
+            case 2: {
+                moderin = 8;
             }
-            case 3:{
-                moderin=8192;
+            case 3: {
+                moderin = 8192;
             }
-            case 4:{
-                moderin=8388608;
+            case 4: {
+                moderin = 8388608;
             }
-            default:{
+            default: {
                 break;
             }
         }
         return moderin;
     }
-    public static int decoder(int B2,int moderout) {
-        switch (B2){
-            case 2:{
-                moderout=8;
+
+    public static int decoder(int B2, int moderout) {
+        switch (B2) {
+            case 2: {
+                moderout = 8;
             }
-            case 3:{
-                moderout=8192;
+            case 3: {
+                moderout = 8192;
             }
-            case 4:{
-                moderout=8388608;
+            case 4: {
+                moderout = 8388608;
             }
-            default:{
+            default: {
                 break;
             }
         }
         return moderout;
     }
+
     public static int Hzinput(int BV, int moderV) {
         switch (BV) {
             case 2: {
@@ -115,45 +120,48 @@ public class Main {
         }
         return moderV;
     }
-        public static int Hzoutput(int BV2, int moderV2) {
-            switch (BV2){
-                case 2:{
-                    moderV2=1000;
-                }
-                case 3:{
-                    moderV2=1000000;
-                }
-                default:{
-                    break;
-                }
+
+    public static int Hzoutput(int BV2, int moderV2) {
+        switch (BV2) {
+            case 2: {
+                moderV2 = 1000;
             }
-            return moderV2;
+            case 3: {
+                moderV2 = 1000000;
+            }
+            default: {
+                break;
+            }
+        }
+        return moderV2;
 
     }
+
     public static int Timeinput(int T, int modert) {
-        switch (T){
-            case 2:{
-                modert=1000;
+        switch (T) {
+            case 2: {
+                modert = 1000;
             }
-            case 3:{
-                modert=1000000;
+            case 3: {
+                modert = 1000000;
             }
-            default:{
+            default: {
                 break;
             }
         }
         return modert;
 
     }
+
     public static int Timeoutput(int T2, int modert2) {
-        switch (T2){
-            case 2:{
-                modert2=1000;
+        switch (T2) {
+            case 2: {
+                modert2 = 1000;
             }
-            case 3:{
-                modert2=1000000;
+            case 3: {
+                modert2 = 1000000;
             }
-            default:{
+            default: {
                 break;
             }
         }
@@ -187,22 +195,22 @@ public class Main {
         int I = 0;
         int moderout = 1;
         int moderin = 1;
-        coder(B,moderin);
-        decoder(B2,moderout);
+        coder(B, moderin);
+        decoder(B2, moderout);
         switch (What) {
             case "I":
                 System.out.print("K = ");
                 K = in.nextInt();
                 System.out.print("i = ");
                 i = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + (K * i * moderin)/moderout+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "I = " + (K * i * moderin) / moderout + ANSI_RESET);
                 break;
             case "K":
                 System.out.print("I = ");
                 I = in.nextInt();
                 System.out.print("i = ");
                 i = in.nextInt();
-                System.out.println(ANSI_PURPLE +"K = "+ I / i + ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "K = " + I * moderin / i * moderin + ANSI_RESET);
                 break;
             case "i":
                 System.out.print("N = ");
@@ -212,16 +220,16 @@ public class Main {
                     I = in.nextInt();
                     System.out.print("K = ");
                     K = in.nextInt();
-                    System.out.println(ANSI_PURPLE +"i = " + I / K + ANSI_RESET );
+                    System.out.println(ANSI_PURPLE + "i = " + ((I * moderin) / K) / moderout + ANSI_RESET);
                     break;
                 } else {
-                    System.out.println(ANSI_PURPLE +"i =" + Math.log(N)+ ANSI_RESET );
+                    System.out.println(ANSI_PURPLE + "i =" + Math.log(N) / moderout + ANSI_RESET);
                     break;
                 }
             case "N":
                 System.out.print("i = ");
                 i = in.nextInt();
-                System.out.println(ANSI_PURPLE +"N = " + Math.pow(2, i)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "N = " + Math.pow(2, i * moderin) + ANSI_RESET);
                 break;
         }
         a = 1;
@@ -233,7 +241,7 @@ public class Main {
         System.out.print("Размер ввода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт \nВведите номер: ");
         String BAsString = in.next();
         int B = Integer.parseInt(BAsString);
-        System.out.print("Размер  вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт   \n Введите номер: ");
+        System.out.print("Размер  вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт   \nВведите номер: ");
         String B2AsString = in.next();
         int B2 = Integer.parseInt(B2AsString);
         System.out.print("Размер ввода: \n 1. секунда \n 2. минута \n 3. час \nВведите номер:");
@@ -245,7 +253,7 @@ public class Main {
         System.out.print("Размер входной герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \n Введите номер:");
         String BVAsString = in.next();
         int BV = Integer.parseInt(BVAsString);
-        System.out.print("Размер выходной (для задач на нахождение герцовки) герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \n Введите номер:");
+        System.out.print("Размер выходной (для задач на нахождение герцовки) герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \nВведите номер:");
         String BV2AsString = in.next();
         int BV2 = Integer.parseInt(BV2AsString);
 
@@ -258,18 +266,18 @@ public class Main {
         int k = 0;
         int moderV = 1;
         int moderV2 = 1;
-        int moder = 1;
+        int moderin = 1;
         int moderout = 1;
         int moderT = 1;
         int moderT2 = 1;
-        coder(B,moder);
-        Hzinput(BV,moderV);
-        Timeinput(T,moderV);
-        decoder(B2,moderout);
-        Timeoutput(T2,moderT2);
-        Hzoutput(BV2,moderV2);
+        coder(B, moderin);
+        Hzinput(BV, moderV);
+        Timeinput(T, moderV);
+        decoder(B2, moderout);
+        Timeoutput(T2, moderT2);
+        Hzoutput(BV2, moderV2);
         switch (What) {
-            case "V":
+            case "I":
                 System.out.print("I = ");
                 I = in.nextInt();
                 System.out.print("M = ");
@@ -278,10 +286,10 @@ public class Main {
                 t = in.nextInt();
                 System.out.print("k = ");
                 k = in.nextInt();
-                System.out.println(ANSI_PURPLE +"V = " + I * M * t * k + ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "I = " + (V * moderV) * M * t * moderT * k / moderout * moderV2 * moderT2 + ANSI_RESET);
                 break;
-            case "I":
-                System.out.print("V = ");
+            case "V":
+                System.out.print("I = ");
                 V = in.nextInt();
                 System.out.print("M = ");
                 M = in.nextInt();
@@ -289,7 +297,7 @@ public class Main {
                 t = in.nextInt();
                 System.out.print("k = ");
                 k = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + V / (M * t * k)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "V = " + (I * moderin / (M * t * moderT * k)) / moderout * moderV2 * moderT2 + ANSI_RESET);
                 break;
             case "M":
                 System.out.print("V = ");
@@ -300,7 +308,7 @@ public class Main {
                 t = in.nextInt();
                 System.out.print("k = ");
                 k = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + V / (I * t * k)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "M = " + (I * moderin / (V * moderV * t * moderT * k)) / moderout * moderV2 * moderT2 + ANSI_RESET);
                 break;
             case "t":
                 System.out.print("V = ");
@@ -311,7 +319,7 @@ public class Main {
                 I = in.nextInt();
                 System.out.print("k = ");
                 k = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + V / (I * M * k)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "t = " + (I * moderin / (V * moderV * M * k)) / moderout * moderV2 * moderT2 + ANSI_RESET);
                 break;
             case "k":
                 System.out.print("V = ");
@@ -322,7 +330,7 @@ public class Main {
                 I = in.nextInt();
                 System.out.print("t = ");
                 t = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + V / (I * M * t)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "k = " + (I * moderin / (V * moderV * M * t * moderT)) / moderout * moderV2 * moderT2 + ANSI_RESET);
                 break;
 
         }
@@ -334,6 +342,9 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.println("Размер ввода-вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт   \n Введите номер: ");
         String BAsString = in.next();
+        System.out.print("Размер  вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт   \nВведите номер: ");
+        String B2AsString = in.next();
+        int B2 = Integer.parseInt(B2AsString);
         int B = Integer.parseInt(BAsString);
         System.out.print("Что необходимо найти? (I, i, X, Y): ");
         String What = in.next();
@@ -341,8 +352,10 @@ public class Main {
         int I = 0;
         int i = 0;
         int Y = 0;
-        int moder = 1;
-        coder(B,moder);
+        int moderin = 1;
+        int moderout = 1;
+        coder(B, moderin);
+        decoder(B2, moderout);
         switch (What) {
             case "i":
                 System.out.print("I = ");
@@ -351,7 +364,7 @@ public class Main {
                 X = in.nextInt();
                 System.out.print("Y = ");
                 Y = in.nextInt();
-                System.out.println(ANSI_PURPLE +"V = " + I / (X * Y)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "i= " + (I * moderin / (X * Y)) / moderout + ANSI_RESET);
                 break;
             case "I":
                 System.out.print("i = ");
@@ -360,7 +373,7 @@ public class Main {
                 X = in.nextInt();
                 System.out.print("Y = ");
                 Y = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + i * X * Y+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "I = " + (i * moderin * X * Y) / moderout + ANSI_RESET);
                 break;
             case "X":
                 System.out.print("i = ");
@@ -369,7 +382,7 @@ public class Main {
                 I = in.nextInt();
                 System.out.print("t = ");
                 Y = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + I / (i * Y)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "X = " + (I * moderin / (i * moderin * Y)) + ANSI_RESET);
                 break;
             case "Y":
                 System.out.print("X = ");
@@ -378,7 +391,7 @@ public class Main {
                 i = in.nextInt();
                 System.out.print("I = ");
                 I = in.nextInt();
-                System.out.println(ANSI_PURPLE +"I = " + I / (i * X)+ ANSI_RESET );
+                System.out.println(ANSI_PURPLE + "Y = " + (I * moderin / (i * moderin * X)) + ANSI_RESET);
                 break;
         }
         a = 1;
