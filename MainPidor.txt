@@ -102,18 +102,32 @@ public class Main {
         return moderout;
     }
     public static int Hzinput(int BV, int moderV) {
-        switch (BV){
-            case 2:{
-                moderV=1000;
+        switch (BV) {
+            case 2: {
+                moderV = 1000;
             }
-            case 3:{
-                moderV=1000000;
+            case 3: {
+                moderV = 1000000;
             }
-            default:{
+            default: {
                 break;
             }
         }
         return moderV;
+    }
+        public static int Hzoutput(int BV2, int moderV2) {
+            switch (BV2){
+                case 2:{
+                    moderV2=1000;
+                }
+                case 3:{
+                    moderV2=1000000;
+                }
+                default:{
+                    break;
+                }
+            }
+            return moderV2;
 
     }
     public static int Timeinput(int T, int modert) {
@@ -129,6 +143,21 @@ public class Main {
             }
         }
         return modert;
+
+    }
+    public static int Timeoutput(int T2, int modert2) {
+        switch (T2){
+            case 2:{
+                modert2=1000;
+            }
+            case 3:{
+                modert2=1000000;
+            }
+            default:{
+                break;
+            }
+        }
+        return modert2;
 
     }
 
@@ -201,15 +230,25 @@ public class Main {
 
     public static int sound(int a) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Размер ввода-вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт ");
-        System.out.println("Размер ввода-вывода: \n 1. секунда \n 2. минута \n 3. час \n");
-        System.out.print("Размер герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \n Введите номера для размерности, затем для герцовки и затем для времени (чезе 1 пробел): ");
+        System.out.print("Размер ввода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт \nВведите номер: ");
         String BAsString = in.next();
         int B = Integer.parseInt(BAsString);
-        String BVAsString = in.next();
-        int BV = Integer.parseInt(BVAsString);
+        System.out.print("Размер  вывода: \n 1. бит \n 2. байт \n 3. килобайт \n 4. мегабайт   \n Введите номер: ");
+        String B2AsString = in.next();
+        int B2 = Integer.parseInt(B2AsString);
+        System.out.print("Размер ввода: \n 1. секунда \n 2. минута \n 3. час \nВведите номер:");
         String TAsString = in.next();
         int T = Integer.parseInt(TAsString);
+        System.out.print("Размер вывода: \n 1. секунда \n 2. минута \n 3. час \nВведите номер:");
+        String T2AsString = in.next();
+        int T2 = Integer.parseInt(T2AsString);
+        System.out.print("Размер входной герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \n Введите номер:");
+        String BVAsString = in.next();
+        int BV = Integer.parseInt(BVAsString);
+        System.out.print("Размер выходной (для задач на нахождение герцовки) герцовки: \n 1. Hz \n 2. KHz \n 3. MHz \n Введите номер:");
+        String BV2AsString = in.next();
+        int BV2 = Integer.parseInt(BV2AsString);
+
         System.out.print("Что необходимо найти? (V, I, M, t, k): ");
         String What = in.next();
         int V = 0;
@@ -218,11 +257,17 @@ public class Main {
         int t = 0;
         int k = 0;
         int moderV = 1;
+        int moderV2 = 1;
         int moder = 1;
+        int moderout = 1;
         int moderT = 1;
+        int moderT2 = 1;
         coder(B,moder);
         Hzinput(BV,moderV);
         Timeinput(T,moderV);
+        decoder(B2,moderout);
+        Timeoutput(T2,moderT2);
+        Hzoutput(BV2,moderV2);
         switch (What) {
             case "V":
                 System.out.print("I = ");
