@@ -10,7 +10,7 @@ public class Game {
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Квест в честь годового юбилея обещаний Богдана провести D&D завтра");
+        System.out.println("Квест в честь двух годового юбилея обещаний Богдана провести D&D на тех выходных");
         System.out.print("Вы чувствуете боль в голове. \n"
                 + "Cухость которая вместе с песком прошлась по вашем дыхательным путям быстро оживила вас. \n(Введите ваше имя):");
         strannik = new Character(in.next());

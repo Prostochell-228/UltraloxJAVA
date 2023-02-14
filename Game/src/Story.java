@@ -1,5 +1,5 @@
 // =======история=======
-public class Story {
+public class Story extends Backpack {
 
     private Situation start_story;
     public Situation current_situation;
@@ -16,14 +16,20 @@ public class Story {
                 4, 0, 0);
         start_story.direction[0] = new Situation(
                 "Самочувствие",
-                "Неудачное начало, ну что ж, почки на месте и на том спасибо "
-                        + "эх без телеги и друзей",
-                
-                0, 1, 0);
+                "Неудачное начало, ну что ж, почки на месте и на том спасибо"
+                        +"\n(1)Надо бы рюкзак проверить"
+                        +"\n(2)Так я вроде указатель тут видел",
+
+                2, 1, 0);
+        start_story.direction[0].direction[0] = new Situation(
+                "Содержимое рюкзака",
+                "Довольно медлительно сняв и открыв свой рюкзак со спины \n вы наблюдаете это",2,1,0;
+                for(int i = 0; i< arBackpack.size(); i++) {
+                System.out.println(arBackpack.get(i));
+                } );
         start_story.direction[1] = new Situation(
-                "2",
-                "Это пустыня игрок, я люблю этот запах дизбалансных монстров по утру"
-                        + "\nНа вас вылетело 3 касадора, чего делать будем?\n"
+                "Это пустыня игрок, я люблю этот запах дизбалансных монстров по утру",
+                "\nНа вас вылетело 3 касадора, чего делать будем?\n"
                         + "(1)Бей\n"
                         + "(2)Беги\n",
 
@@ -33,14 +39,14 @@ public class Story {
                 "Смэрть",
                 "Вас поглатила пустыня...",
                 0,
-                0,
+                -1,
                 0
                 );
         start_story.direction[1].direction[1] = new Situation(
-                "Смэрть",
+                "Смээээрть",
                 "Вас поглатила пустыня... но не так быстро",
                 0,
-                0,
+                1,
                 0
         );
         start_story.direction[2] = new Situation(
